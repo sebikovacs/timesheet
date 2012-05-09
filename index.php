@@ -25,7 +25,7 @@
 				<form action="">
 					<fieldset>
 						<label>'Sup?</label>
-						<textarea name="comment" id="" cols="30" rows="10"></textarea>
+						<textarea name="comment" id="" cols="30" rows="10" placeholder="Ctrl+Enter to submit"></textarea>
 						<!--<button type="submit" class="right btn btn-success">Submit</button>-->
 					</fieldset>
 				</form>
