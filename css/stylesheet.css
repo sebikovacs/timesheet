@@ -1,0 +1,22 @@
+body { background: url(../images/bg2.jpg) repeat; color: #333; }
+.container { background: rgba(255,255,255,.9); box-shadow: rgba(0,0,0,.5) 0 0 20px; padding: 0 30px; margin-top: 30px; width: 560px; }
+.row { margin-bottom: 50px; }
+
+body h1 { text-align: center;  }
+
+ul {  }
+ul li { margin: 0 0 15px; }
+ul li strong { display: inline-block; width: 90px; float:left; color: #c1c1c1; }
+ul li span { display: inline-block; float:left; width: 500px; }
+body h1 { background: url(../images/logo.png) 0 0 no-repeat; width: 271px; height: 191px; margin: 30px auto; text-indent: -10000px; }
+
+.content { position: relative; }
+
+form { position: absolute; left: -260px; background: rgba(0, 0, 0, .4); padding: 10px 0px 0 10px; border-radius: 6px 0px 0px 6px; width: 240px; }
+form label { color: #fff }
+form textarea { display: block; width: 90%; height: 60px; }
+form button { float: right; margin-right: 20px; }
+
+.offset4 { text-align: center; }
+.offset4 p {  }
+
