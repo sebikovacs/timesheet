@@ -6,7 +6,7 @@ body h1 { text-align: center;  }
 
 ul {  }
 ul li { margin: 0 0 15px; }
-ul li strong { display: inline-block; width: 90px; float:left; color: #c1c1c1; }
+ul li strong { display: inline-block; width: 130px; float:left; color: #c1c1c1; }
 ul li span { display: inline-block; float:left; width: 500px; }
 body h1 { background: url(../images/logo.png) 0 0 no-repeat; width: 271px; height: 191px; margin: 30px auto; text-indent: -10000px; }
 

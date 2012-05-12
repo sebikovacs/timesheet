@@ -111,6 +111,11 @@ var App = {
 		var year = date.getFullYear().toString();
 		var month = date.getMonth()+1;
 		var day = date.getDate().toString();
+		var hours = date.getHours();
+		var minutes = date.getMinutes();
+
+		(hours < 10) ? hours = '0'+ hours : hours = hours;
+		(minutes < 10) ? minutes = '0'+ minutes : minutes = minutes;
 
 		if (month < 10) {
 			month = '0' + month.toString();
@@ -118,8 +123,8 @@ var App = {
 		if (day < 10) {
 			day = '0' + day;
 		}
-		var dateString = day + '/' + month + '/' + year;
-
+		var dateString = day + '/' + month + '/' + year + ' at ' + hours + ':' + minutes;
+		
 		//validate textarea
 		if (content === ''){
 			alert('Please fill in the textbox with a status');
