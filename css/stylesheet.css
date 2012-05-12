@@ -1,5 +1,6 @@
 body { background: url(../images/bg2.jpg) repeat; color: #333; }
-.container { background: rgba(255,255,255,.9); box-shadow: rgba(0,0,0,.5) 0 0 20px; padding: 0 30px; margin-top: 30px; width: 560px; }
+body a { cursor: pointer;}
+.container { position:relative; background: rgba(255,255,255,.9); box-shadow: rgba(0,0,0,.5) 0 0 20px; padding: 0 30px; margin-top: 30px; width: 560px; }
 .row { margin-bottom: 50px; }
 
 body h1 { text-align: center;  }
@@ -12,11 +13,12 @@ body h1 { background: url(../images/logo.png) 0 0 no-repeat; width: 271px; heigh
 
 .content { position: relative; }
 
-form { position: absolute; left: -260px; background: rgba(0, 0, 0, .4); padding: 10px 0px 0 10px; border-radius: 6px 0px 0px 6px; width: 240px; }
+form { position: absolute; left: -260px; top: -51px; background: rgba(0, 0, 0, .4); padding: 10px 0px 0 10px; border-radius: 6px 0px 0px 6px; width: 240px; }
 form label { color: #fff }
-form textarea { display: block; width: 90%; height: 60px; }
+form textarea { display: block; width: 90%; height: 60px; resize: none; }
 form button { float: right; margin-right: 20px; }
 
-.offset4 { text-align: center; }
-.offset4 p {  }
+.alert-info { padding-top: 17px; padding-bottom: 17px;}
+.alert-info p {  }
+a.read-more { position: absolute; top: 260px; left: 50px; display: block; width: 170px; }
 

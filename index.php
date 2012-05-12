@@ -14,12 +14,17 @@
 	
 	<div class="container">
 		<h1>Timesheet</h1>
-		<div class="row">
-			<div class="alert alert-info span4 offset4">
-				<p>The system needs your permision to notify when the it's time to fill in your timesheet. Please push the button to do so:</p>
-				<a href="" title="" class="btn permit-notifications btn-warning">Permit notifications?</a>
+		
+			<div class="alert alert-info">
+				<div class="alert-content">
+					<h2>What does it do?</h2>
+					<p>It helps me keep track of the projects I work on during the day. It uses desktop notifications to let me know it's time to write something. </p>
+					<p>Data is saved to a local <a href="http://html5doctor.com/introducing-web-sql-databases/">Web SQL Database</a> hence it works only in Chrome or Safari.</p>
+					<p class="only-once">To enable notifications press the button bellow (only once):</p>
+					<a href="" title="" class="btn permit-notifications btn-warning only-once">Enable notifications?</a>
+				</div>	
 			</div>
-		</div>
+			<a class="read-more" title="Clikc here to read more about this app" herf="#">Read more about this app</a>
 		<div class="row content">
 			
 				<form action="">

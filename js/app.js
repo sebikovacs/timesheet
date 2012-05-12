@@ -1,4 +1,5 @@
-//notify object, src: 0xfe.muthanna.com/notifyme.html
+/* notify wrapper object, 
+ * src: 0xfe.muthanna.com/notifyme.html */
 
 function Notifier() {}
 
@@ -40,9 +41,11 @@ var App = {
 	},
 	notifications: function(){
 		var nc = new Notifier;
-		
+		var self = App;
 		if (nc.HasSupport() ){
-			$('.alert-info').hide();
+			App.hideDescription();
+			$('.only-once').hide();
+			//$('.alert-info').hide();
 			setInterval(function(){
 				var date = new Date();
 				var hours = date.getHours();
@@ -64,6 +67,14 @@ var App = {
 
 			}, 60000);
 		}
+	},
+	hideDescription: function(){
+		var $readMore = $('<a>').attr({
+			class: 'read-more',
+			title: 'Clikc here to read more about this app',
+			herf: '#'
+		}).html('Read more about this app');
+		$('.alert-content').hide().parent().parent().insertAfter($readMore);
 	},
 	startDb: function(){
 		this.db = openDatabase('timesheet', '1.0', 'my first database', 2 * 1024 * 1024);
@@ -102,6 +113,33 @@ var App = {
 		$('button.btn').on('click', this.onSubmit);
 		$('a.permit-notifications').on('click', this.onNotificationRequest);
 		$('textarea').bind('keydown','ctrl+return', this.onSubmit);
+		$('a.read-more').on('click', this.onReadMoreClick);
+	},
+	onReadMoreClick: function(e){
+		var self = App;
+		var $this = $(this);
+		var $content = $('.alert-content');
+		var flag = $this.attr('rel');
+		if (!flag){
+			$content.slideDown();
+			$this
+				.attr('rel','1')
+				.html('Hide description')
+				.animate({
+					left: 480+'px'
+				}, 500);
+
+		} else if ( flag == 1){
+			$content.slideUp();
+			$this
+				.removeAttr('rel')
+				.animate({
+					left: 50+'px'
+				}, 500)
+				.html('Read more about this app');
+		}
+
+		e.preventDefault();
 	},
 	onSubmit: function(e){
 		var self = App;
@@ -139,9 +177,6 @@ var App = {
 		var $date = $('<strong>').html(dateString);
 		var $description = $('<span>').html(content);
 		
-		//clear textarea
-		
-
 		//append information
 		$li.append($date);
 		$li.append($description);
@@ -159,7 +194,10 @@ var App = {
 		var self = App;
 		var nc = new Notifier;
 		nc.RequestPermission();
-
+		var $this = $(this);
+		setTimeout(function(){
+			$this.parent().fadeOut();
+		}, 2000);
 		e.preventDefault();
 
 	}
