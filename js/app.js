@@ -42,7 +42,7 @@ var App = {
 	notifications: function(){
 		var nc = new Notifier;
 		var self = App;
-		if (nc.HasSupport() ){
+		if (window.webkitNotifications.checkPermission() == 0 ){
 			App.hideDescription();
 			$('.only-once').hide();
 			//$('.alert-info').hide();
@@ -66,15 +66,19 @@ var App = {
 				}
 
 			}, 60000);
+		} else {
+			$('.read-more').hide();
 		}
 	},
 	hideDescription: function(){
 		var $readMore = $('<a>').attr({
 			class: 'read-more',
-			title: 'Clikc here to read more about this app',
+			title: 'Click here to read more about this app',
 			herf: '#'
-		}).html('Read more about this app');
+		}).html('Read more about this app')
+		.css('display: block;');
 		$('.alert-content').hide().parent().parent().insertAfter($readMore);
+
 	},
 	startDb: function(){
 		this.db = openDatabase('timesheet', '1.0', 'my first database', 2 * 1024 * 1024);

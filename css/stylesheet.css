@@ -13,7 +13,7 @@ body h1 { background: url(../images/logo.png) 0 0 no-repeat; width: 271px; heigh
 
 .content { position: relative; }
 
-form { position: absolute; left: -260px; top: -51px; background: rgba(0, 0, 0, .4); padding: 10px 0px 0 10px; border-radius: 6px 0px 0px 6px; width: 240px; }
+form { position: absolute; left: -260px; top: -167px; background: rgba(0, 0, 0, .4); padding: 10px 0px 0 10px; border-radius: 6px 0px 0px 6px; width: 240px; }
 form label { color: #fff }
 form textarea { display: block; width: 90%; height: 60px; resize: none; }
 form button { float: right; margin-right: 20px; }
