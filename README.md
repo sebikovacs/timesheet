@@ -6,5 +6,5 @@ Just clone this repo or unzip a zipball in your WAMP/XAMP 'folder' if you're on 
 This app will only work in Chrome because it uses feature curently available only in this browsers.
 
 ## Features
-Notifications  - in order to enable them you will have to allow the app to use 'webkit notifications' by pushing a button.
-Local database - the information is stored locally, no need to configure external databases.
+>Notifications  - in order to enable them you will have to allow the app to use 'webkit notifications' by pushing a button.
+>Local database - the information is stored locally, no need to configure external databases.
