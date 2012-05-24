@@ -2,7 +2,7 @@
 I created this small app in order to keep track of the tasks I accomplish during my work day. 
 
 ## Usage/Dependecies
-Just clone this repo or unzip a zipball in your WAMP/XAMP 'folder' if you're on Windows or in the '/var/www/' if on Ubuntu/Linux.  
+Just clone this repo or unzip a zipball in your WAMP/XAMP 'www' folder if you're on Windows or in the '/var/www/' if on Ubuntu/Linux.  
 This app will only work in Chrome because it uses features curently available only in this browsers.  
 
 ## Features
